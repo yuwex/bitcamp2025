@@ -1,15 +1,15 @@
 {
 	"events": [
 		{
-			"id": 0.0,
+			"id": 0,
 			"conditions": [],
-			"weight": 1.0,
+			"weight": 1,
 			"station": "HACKING",
 			"description": "Do you want to work on your project or rest?",
 			"options": [
 				{
 					"description": "Work",
-					"trigger": -1.0,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "PROJ_TECHNICAL",
@@ -25,7 +25,7 @@
 				},
 				{
 					"description": "Rest",
-					"trigger": -1.0,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "ENERGY",
