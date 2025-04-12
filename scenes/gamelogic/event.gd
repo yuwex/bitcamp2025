@@ -70,7 +70,9 @@ func _init(data: Dictionary) -> void:
 	description = data["description"]
 	options = []
 
-func accept(stats: Dictionary[Stats.StatType, int]) -> bool:
+func accept(station: Event.Station, stats: Dictionary[Stats.StatType, int]) -> bool:
+	if self.station != station:
+		return false
 	for condition in conditions:
 		if not condition.accept(stats):
 			return false

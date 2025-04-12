@@ -11,7 +11,7 @@ enum StatType {
 	PROJ_USER_EXPERIENCE
 }
 
-var stats: Dictionary[StatType, int]
+static var stats: Dictionary[StatType, int]
 
 func _init():
 	stats = {
