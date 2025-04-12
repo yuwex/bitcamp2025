@@ -37,9 +37,6 @@ class Effect:
 		stat = Stats.StatType[data["stat"]]
 		type = StatChangeType[data["type"]]
 		value = float(data["value"])
-	
-	func apply(stats: Stats) -> void:
-		return
 
 class Option:
 	var description: String

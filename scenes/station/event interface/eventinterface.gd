@@ -14,9 +14,11 @@ var items: Array[Label] = []
 
 func _ready() -> void:
 	
+	assert(event, "Event must be passed")
+	
 	### TESTING
-	EventManager.initEvents()
-	event = EventManager.allEvents[0]
+	#EventManager.initEvents()
+	#event = EventManager.allEvents[0]
 	###
 	
 	items = [description]
@@ -85,9 +87,7 @@ func option_chosen(option: Event.Option):
 		else:
 			anim.play('selected')
 	
-	
-	# TODO: Call all option effects
-	# option.effects ...
+	Stats.new().apply_effects(option.effects)
 	
 	await get_tree().create_timer(1).timeout
 	

@@ -1,6 +1,6 @@
 class_name Stats
 
-signal effect_applied(statchangetype, value)
+signal effect_applied(effect)
 
 enum StatType {
 	HUNGER,
@@ -13,22 +13,26 @@ enum StatType {
 	PROJ_USER_EXPERIENCE
 }
 
-static var stats: Dictionary[StatType, int]
+static var stats: Dictionary[StatType, int] = {
+	StatType.HUNGER: 0,
+	StatType.ENERGY: 100,
+	StatType.KNOWLEDGE: 0,
+	StatType.MORALE: 100,
+	StatType.COMMUNICATION: 50,
+	StatType.PROJ_TECHNICAL: 0,
+	StatType.PROJ_ORIGINALITY: 0,
+	StatType.PROJ_USER_EXPERIENCE: 0
+}
 
-func _init():
-	stats = {
-		StatType.HUNGER: 0,
-		StatType.ENERGY: 100,
-		StatType.KNOWLEDGE: 0,
-		StatType.MORALE: 100,
-		StatType.COMMUNICATION: 50,
-		StatType.PROJ_TECHNICAL: 0,
-		StatType.PROJ_ORIGINALITY: 0,
-		StatType.PROJ_USER_EXPERIENCE: 0
-	}
-	
+func apply_effects(effects: Array[Event.Effect]):
+	for e in effects:
+		apply_effect(e)
+
 func apply_effect(effect: Event.Effect):
 	
-	# ... more code here
+	if effect.type == Event.StatChangeType.ADDITIVE:
+		stats[effect.stat] += effect.value
+	elif effect.type == Event.StatChangeType.MULTIPLICATIVE:
+		stats[effect.stat] *= effect.value
 	
-	pass
+	effect_applied.emit(effect)
