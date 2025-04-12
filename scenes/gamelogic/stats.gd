@@ -24,3 +24,7 @@ func _init():
 		StatType.PROJ_ORIGINALITY: 0,
 		StatType.PROJ_USER_EXPERIENCE: 0
 	}
+	
+func modify():
+
+	pass
