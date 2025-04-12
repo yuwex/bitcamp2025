@@ -69,6 +69,8 @@ func _init(data: Dictionary) -> void:
 	station = Event.Station[data["station"]]
 	description = data["description"]
 	options = []
+	for optionData in data["options"]:
+		options.append(Option.new(optionData))
 
 func accept(stations: Array[Event.Station], stats: Dictionary[Stats.StatType, int]) -> bool:
 	if not self.station in stations:
