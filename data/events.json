@@ -2,8 +2,12 @@
 	"events": [
 		{
 			"id": 0,
-			"conditions": [],
-			"weight": 1,
+			"conditions": [{
+				"stat": "ENERGY",
+				"max": 100,
+				"min": 20
+			}],
+			"weight": 100,
 			"station": "HACKING",
 			"description": "Do you want to work on your project or rest?",
 			"options": [
