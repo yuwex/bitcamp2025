@@ -36,14 +36,20 @@ class Option:
 	var description: String
 	var trigger: int
 	var effect: Array[Effect]
-	
+
+var id: String
+var condition: Array[Condition]
+var weight: int
+var station: Event.Station
+var description: String
+var options: Array[Option]
 
 # id: str
 # condition: list[condition]
 # # stat
 # # min
 # # max
-# weights: int
+# weight: int
 # station: enum
 # description: str
 # options: list[option]
