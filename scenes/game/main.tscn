@@ -1,6 +1,202 @@
-[gd_scene load_steps=2 format=3 uid="uid://de525qkl7d0cs"]
+[gd_scene load_steps=3 format=3 uid="uid://cbtahsxpm84bl"]
 
-[ext_resource type="Script" uid="uid://cm4j5evwdkqlr" path="res://scenes/game/main.gd" id="1_h2yge"]
+[ext_resource type="Script" path="res://scenes/game/main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dygs6yuvflrfx" path="res://assets/environment.png" id="2_oekm8"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(0, -56)
 script = ExtResource("1_h2yge")
+
+[node name="Floor" type="Node" parent="."]
+
+[node name="Floor" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(96, 40)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor2" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(288, 40)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor3" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(480, 40)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor4" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(672, 40)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor5" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(864, 40)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor6" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(1056, 40)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor7" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(96, 232)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor8" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(288, 232)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor9" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(480, 232)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor10" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(672, 232)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor11" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(864, 232)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor12" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(1056, 232)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor13" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(96, 424)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor14" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(288, 424)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor15" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(480, 424)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor16" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(672, 424)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor17" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(864, 424)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor18" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(1056, 424)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor19" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(96, 616)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor20" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(288, 616)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor21" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(480, 616)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor22" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(672, 616)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor23" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(864, 616)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Floor24" type="Sprite2D" parent="Floor"]
+texture_filter = 1
+position = Vector2(1056, 616)
+scale = Vector2(6, 6)
+texture = ExtResource("2_oekm8")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
