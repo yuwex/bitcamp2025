@@ -1338,6 +1338,1284 @@
 					"effects": []
 				}
 			]
+		},
+		{
+			"id": 30,
+			"conditions": [],
+			"weight": 100,
+			"station": "PRESENTATION",
+			"description": "Your project is ready for presentation, but you feel nervous. What do you do?",
+			"options": [
+				{
+					"description": "Practice the presentation one more time",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Just go ahead and present",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 31,
+			"conditions": [],
+			"weight": 100,
+			"station": "HACKING",
+			"description": "You’ve discovered a bug in your code. How do you approach fixing it?",
+			"options": [
+				{
+					"description": "Investigate thoroughly and fix the issue",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 15.0
+						}
+					]
+				},
+				{
+					"description": "Ask a teammate for help",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Take a break and come back to it later",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 32,
+			"conditions": [
+				{
+					"stat": "KNOWLEDGE",
+					"min": 40,
+					"max": 100
+				}
+			],
+			"weight": 100,
+			"station": "WORKSHOP",
+			"description": "A coding best practices session is being held. Do you attend?",
+			"options": [
+				{
+					"description": "Yes, I’ll attend the session",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "No, I’ll continue coding",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 33,
+			"conditions": [
+				{
+					"stat": "ENERGY",
+					"min": 0,
+					"max": 50
+				}
+			],
+			"weight": 100,
+			"station": "EXIT",
+			"description": "It’s getting late, and you’re feeling low on energy. Do you call it a day?",
+			"options": [
+				{
+					"description": "Head home and rest",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 30.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Stay a bit longer to finish your project",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": -10.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Grab a quick snack and push through",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 34,
+			"conditions": [],
+			"weight": 100,
+			"station": "SPONSOR",
+			"description": "You receive feedback from a sponsor. How do you handle it?",
+			"options": [
+				{
+					"description": "Take their advice and improve your project",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Defend your project and explain your decisions",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Thank them but stick to your plan",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 30,
+			"conditions": [],
+			"weight": 100,
+			"station": "PRESENTATION",
+			"description": "Your project is ready for presentation, but you feel nervous. What do you do?",
+			"options": [
+				{
+					"description": "Practice the presentation one more time",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Just go ahead and present",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 31,
+			"conditions": [],
+			"weight": 100,
+			"station": "HACKING",
+			"description": "You’ve discovered a bug in your code. How do you approach fixing it?",
+			"options": [
+				{
+					"description": "Investigate thoroughly and fix the issue",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 15.0
+						}
+					]
+				},
+				{
+					"description": "Ask a teammate for help",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Take a break and come back to it later",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 32,
+			"conditions": [
+				{
+					"stat": "KNOWLEDGE",
+					"min": 40,
+					"max": 100
+				}
+			],
+			"weight": 100,
+			"station": "WORKSHOP",
+			"description": "A coding best practices session is being held. Do you attend?",
+			"options": [
+				{
+					"description": "Yes, I’ll attend the session",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "No, I’ll continue coding",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 33,
+			"conditions": [
+				{
+					"stat": "ENERGY",
+					"min": 0,
+					"max": 50
+				}
+			],
+			"weight": 100,
+			"station": "EXIT",
+			"description": "It’s getting late, and you’re feeling low on energy. Do you call it a day?",
+			"options": [
+				{
+					"description": "Head home and rest",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 30.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Stay a bit longer to finish your project",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": -10.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Grab a quick snack and push through",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 34,
+			"conditions": [],
+			"weight": 100,
+			"station": "SPONSOR",
+			"description": "You receive feedback from a sponsor. How do you handle it?",
+			"options": [
+				{
+					"description": "Take their advice and improve your project",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Defend your project and explain your decisions",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Thank them but stick to your plan",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 35,
+			"conditions": [],
+			"weight": 100,
+			"station": "HACKING",
+			"description": "You’ve hit a creative block. How do you approach this?",
+			"options": [
+				{
+					"description": "Take a short break and come back with fresh ideas",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Brainstorm with your team",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Work through the block and push ahead",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 36,
+			"conditions": [],
+			"weight": 100,
+			"station": "WORKSHOP",
+			"description": "A new machine learning workshop is starting. Do you attend?",
+			"options": [
+				{
+					"description": "Yes, I’ll attend the workshop",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "No, I’m focused on my project",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 37,
+			"conditions": [],
+			"weight": 100,
+			"station": "HARDWARE",
+			"description": "You find some old tech hardware lying around. Do you tinker with it?",
+			"options": [
+				{
+					"description": "Take it apart and experiment",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Leave it and focus on your project",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 38,
+			"conditions": [
+				{
+					"stat": "MORALE",
+					"min": 30,
+					"max": 100
+				}
+			],
+			"weight": 100,
+			"station": "SPONSOR",
+			"description": "A sponsor is interested in your project but seems distracted. What do you do?",
+			"options": [
+				{
+					"description": "Keep pitching and try to capture their attention",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 15.0
+						},
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Politely end the conversation",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 39,
+			"conditions": [],
+			"weight": 100,
+			"station": "FOOD",
+			"description": "You feel a bit down. Do you grab something to eat?",
+			"options": [
+				{
+					"description": "Get a full meal to recharge",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -30.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 15.0
+						}
+					]
+				},
+				{
+					"description": "Grab a quick snack",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 40,
+			"conditions": [
+				{
+					"stat": "ENERGY",
+					"max": 100,
+					"min": 20
+				}
+			],
+			"weight": 100,
+			"station": "HACKING",
+			"description": "Do you want to work on your project or rest?",
+			"options": [
+				{
+					"description": "Work",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Rest",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 41,
+			"conditions": [
+				{
+					"stat": "HUNGER",
+					"max": 50,
+					"min": 0
+				}
+			],
+			"weight": 80,
+			"station": "FOOD",
+			"description": "You're feeling hungry. Grab some snacks?",
+			"options": [
+				{
+					"description": "Eat snacks",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 50.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 20.0
+						}
+					]
+				},
+				{
+					"description": "Ignore hunger",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 42,
+			"conditions": [],
+			"weight": 50,
+			"station": "SPONSOR",
+			"description": "A sponsor is giving a short presentation. Do you want to attend?",
+			"options": [
+				{
+					"description": "Attend",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Continue hacking",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 43,
+			"conditions": [
+				{
+					"stat": "MORALE",
+					"max": 60,
+					"min": 0
+				}
+			],
+			"weight": 70,
+			"station": "HACKING",
+			"description": "Team morale is low. Do you want to do a team building exercise?",
+			"options": [
+				{
+					"description": "Team building",
+					"trigger": 1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 30.0
+						}
+					]
+				},
+				{
+					"description": "Ignore it",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 44,
+			"conditions": [],
+			"weight": 60,
+			"station": "HARDWARE",
+			"description": "You need a specific hardware component. Do you want to try and find it?",
+			"options": [
+				{
+					"description": "Search hardware",
+					"trigger": 2,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Skip hardware for now",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 45,
+			"conditions": [
+				{
+					"stat": "KNOWLEDGE",
+					"max": 50,
+					"min": 0
+				}
+			],
+			"weight": 90,
+			"station": "WORKSHOP",
+			"description": "A workshop is being held on a topic you're unfamiliar with. Do you want to attend?",
+			"options": [
+				{
+					"description": "Attend workshop",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 20.0
+						}
+					]
+				},
+				{
+					"description": "Continue hacking",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 46,
+			"conditions": [],
+			"weight": 100,
+			"station": "PRESENTATION",
+			"description": "Time to present your project. Do you feel prepared?",
+			"options": [
+				{
+					"description": "Present",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 15.0
+						},
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 15.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 15.0
+						}
+					]
+				},
+				{
+					"description": "Panic",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -20.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 47,
+			"conditions": [
+				{
+					"stat": "COMMUNICATION",
+					"max": 100,
+					"min": 50
+				}
+			],
+			"weight": 60,
+			"station": "HACKING",
+			"description": "A team member has a great idea! Do you want to discuss it?",
+			"options": [
+				{
+					"description": "Discuss",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Ignore",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 48,
+			"conditions": [
+				{
+					"stat": "ENERGY",
+					"max": 30,
+					"min": 0
+				}
+			],
+			"weight": 70,
+			"station": "EXIT",
+			"description": "You're feeling exhausted. Do you want to take a short break?",
+			"options": [
+				{
+					"description": "Take a break",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 30.0
+						}
+					]
+				},
+				{
+					"description": "Push through",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": -10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 49,
+			"conditions": [],
+			"weight": 40,
+			"station": "HACKING",
+			"description": "You encounter a bug in your code. How do you proceed?",
+			"options": [
+				{
+					"description": "Debug",
+					"trigger": 3,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 15.0
+						},
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Ask for help",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 50,
+			"conditions": [
+				{
+					"stat": "PROJ_ORIGINALITY",
+					"max": 50,
+					"min": 0
+				}
+			],
+			"weight": 55,
+			"station": "HACKING",
+			"description": "You feel your project lacks originality. Do you want to brainstorm new ideas?",
+			"options": [
+				{
+					"description": "Brainstorm",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 20.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Continue as is",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 51,
+			"conditions": [],
+			"weight": 30,
+			"station": "SPONSOR",
+			"description": "A sponsor is offering feedback on projects. Do you want to get their opinion?",
+			"options": [
+				{
+					"description": "Get feedback",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Decline feedback",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 52,
+			"conditions": [
+				{
+					"stat": "HUNGER",
+					"max": 20,
+					"min": 0
+				}
+			],
+			"weight": 90,
+			"station": "FOOD",
+			"description": "You're extremely hungry! There's a special food event happening.",
+			"options": [
+				{
+					"description": "Attend event",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 80.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 15.0
+						}
+					]
+				},
+				{
+					"description": "Quick snack",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 30.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 53,
+			"conditions": [],
+			"weight": 45,
+			"station": "HARDWARE",
+			"description": "Someone is offering to trade hardware. Do you want to trade?",
+			"options": [
+				{
+					"description": "Trade",
+					"trigger": 4, 
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 20.0
+						}
+					]
+				},
+				{
+					"description": "Decline trade",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 54,
+			"conditions": [
+				{
+					"stat": "KNOWLEDGE",
+					"max": 80,
+					"min": 50
+				}
+			],
+			"weight": 60,
+			"station": "HACKING",
+			"description": "You feel confident in your knowledge. Do you want to help another team?",
+			"options": [
+				{
+					"description": "Help",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 15.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Focus on project",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 55,
+			"conditions": [],
+			"weight": 25,
+			"station": "WORKSHOP",
+			"description": "A less popular workshop is happening. Do you want to go for a change of pace?",
+			"options": [
+				{
+					"description": "Attend",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Skip",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 56,
+			"conditions": [
+				{
+					"stat": "PROJ_USER_EXPERIENCE",
+					"max": 60,
+					"min": 0
+				}
+			],
+			"weight": 75,
+			"station": "HACKING",
+			"description": "You realize the user interface could be better. Do you want to redesign it?",
+			"options": [
+				{
+					"description": "Redesign",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 25.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				},
+				{
+					"description": "Leave as is",
+					"trigger": -1,
+					"effects": []
+				}
+			]
+		},
+		{
+			"id": 57,
+			"conditions": [],
+			"weight": 10,
+			"station": "EXIT",
+			"description": "You're feeling overwhelmed. Do you want to go outside for fresh air?",
+			"options": [
+				{
+					"description": "Go outside",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 15.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Stay inside",
+					"trigger": -1,
+					"effects": []
+				}
+			]
 		}
 	]
 }
