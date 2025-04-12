@@ -1,5 +1,4 @@
 extends Node2D
 
-func _ready() -> void:
-	EventManager.initEvents()
-	print(EventManager.getEvents([Event.Station.HACKING], Stats.stats))
+func _on_timer_timeout() -> void:
+	GameManager.timerTick()
