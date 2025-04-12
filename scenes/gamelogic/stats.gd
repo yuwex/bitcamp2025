@@ -1,5 +1,7 @@
 class_name Stats
 
+signal effect_applied(statchangetype, value)
+
 enum StatType {
 	HUNGER,
 	ENERGY,
@@ -25,6 +27,8 @@ func _init():
 		StatType.PROJ_USER_EXPERIENCE: 0
 	}
 	
-func modify():
-
+func apply_effect(effect: Event.Effect):
+	
+	# ... more code here
+	
 	pass

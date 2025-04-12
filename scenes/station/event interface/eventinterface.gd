@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal completed
+
 var event: Event
 
 var buttons: Array[Button] = []
@@ -8,6 +10,7 @@ var items: Array[Label] = []
 @onready var description: Label = $Description
 @onready var option_template: Label = $Option
 @onready var desc_anim: AnimationPlayer = $Description/AnimationPlayer
+
 
 func _ready() -> void:
 	
@@ -48,30 +51,47 @@ func _ready() -> void:
 		timer.connect('timeout', func(): button.disabled = false)
 		
 		
-func _process(_delta: float):
+func _process(delta: float):
 	var i = 0
 
-	var screen_width = get_viewport().get_visible_rect().size.y
-
+	var screen_height = get_viewport().get_visible_rect().size.y
+	var enabled = 0
+	
 	for item in items:
+		if item.visible:
+			enabled += 1 
+	
+	for item in items:
+				
+		var ty = (i * screen_height) / enabled + (screen_height / 2) / enabled - 50
 		
-		# add easing
-		
-		var y = (i * screen_width / 1.5) / len(items) + (screen_width / 1.5) / 4
-		
-		print(y)
-		item.position.y = y
+		item.position = item.position.lerp(Vector2(item.position.x, ty), delta * 4)
 		
 		i += 1
 		
 
 func option_chosen(option: Event.Option):
+	print('inner')
+	
 	for button in buttons:
 		button.disabled = true
 	
-	# TODO: Some sort of callback with the option passed
+	for item in items:
+		var children = item.get_children()
+		var anim: AnimationPlayer = children[children.find_custom(func(child): return child is AnimationPlayer)]
+		
+		if item.text != option.description:
+			anim.play('disappear')
+		else:
+			anim.play('selected')
 	
-	# TODO: Some sort of animation when choice is chosen
+	
+	# TODO: Call all option effects
+	# option.effects ...
+	
+	await get_tree().create_timer(1).timeout
+	
+	completed.emit()
 	
 	
 	

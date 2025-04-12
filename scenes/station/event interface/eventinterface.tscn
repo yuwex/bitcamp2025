@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhhaj4nef7x2l"]
+[gd_scene load_steps=13 format=3 uid="uid://bhhaj4nef7x2l"]
 
 [ext_resource type="Script" uid="uid://lhbdlyhvbydw" path="res://scenes/station/event interface/eventinterface.gd" id="1_euec8"]
 [ext_resource type="FontFile" uid="uid://bdi41prsghna4" path="res://assets/PeaberryBase.ttf" id="2_yq7ml"]
@@ -212,6 +212,8 @@ _data = {
 &"selected": SubResource("Animation_bsekk")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yq7ml"]
+
 [node name="EventInterface" type="CanvasLayer"]
 script = ExtResource("1_euec8")
 
@@ -221,10 +223,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -480.0
-offset_top = -224.0
-offset_right = 480.0
-offset_bottom = -131.0
+offset_left = -475.0
+offset_top = -52.0
+offset_right = 485.0
+offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -256,16 +258,15 @@ libraries = {
 }
 
 [node name="Option" type="Label" parent="."]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -480.0
-offset_top = -24.0
-offset_right = 480.0
-offset_bottom = 69.0
+offset_left = -479.0
+offset_top = -48.0
+offset_right = 481.0
+offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -280,20 +281,6 @@ visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 metadata/_edit_group_ = true
-
-[node name="Button" type="Button" parent="Option"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.02808, 1)
-theme_override_fonts/font = ExtResource("2_yq7ml")
-theme_override_font_sizes/font_size = 32
-flat = true
-metadata/_edit_use_anchors_ = true
 
 [node name="DescriptionBox" type="ColorRect" parent="Option"]
 z_index = -1
@@ -311,3 +298,18 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 &"": SubResource("AnimationLibrary_m8ahj")
 }
+
+[node name="Button" type="Button" parent="Option"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.02808, 1)
+theme_override_fonts/font = ExtResource("2_yq7ml")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yq7ml")
+flat = true
+metadata/_edit_use_anchors_ = true
