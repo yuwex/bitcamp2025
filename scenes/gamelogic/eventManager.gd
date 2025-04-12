@@ -1,7 +1,26 @@
-extends Node
+class_name EventManager
 
-var allEvents: Array[Event]
+static var allEvents: Array[Event] = []
 
-func initEvents() -> void: 
-	var file = FileAccess.open("", FileAccess.READ)
-	return 
+static func initEvents() -> void: 
+	var file = FileAccess.open("res://data/events.json", FileAccess.READ)
+	if file: 
+		var json_string = file.get_as_text()
+		file.close()
+		
+		var json = JSON.new()
+		var error = json.parse(json_string)
+		if error == OK: 
+			var data = json.data
+			for eventData in data["events"]:
+				allEvents.append(Event.new(eventData))
+				return
+		else:
+			push_error(json.get_error_message())
+			return
+	else:
+		push_error(FileAccess.get_open_error())
+		return
+
+func _ready():
+	initEvents()

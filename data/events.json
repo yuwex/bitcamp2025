@@ -1,0 +1,40 @@
+{
+	"events": [
+		{
+			"id": 0.0,
+			"conditions": [],
+			"weight": 1.0,
+			"station": "HACKING",
+			"description": "Do you want to work on your project or rest?",
+			"options": [
+				{
+					"description": "Work",
+					"trigger": -1.0,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Rest",
+					"trigger": -1.0,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		}
+	]
+}

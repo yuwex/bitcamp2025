@@ -20,6 +20,11 @@ class Condition:
 	var min: float
 	var max: float
 	
+	func _init(data: Dictionary) -> void:
+		stat = Stats.StatType[data["stat"]]
+		min = data["min"]
+		max = data["max"]
+	
 	func accept(stats: Stats) -> bool:
 		#if stats.stats[stat] ...
 		return false
@@ -29,20 +34,42 @@ class Effect:
 	var type: StatChangeType
 	var value: float
 	
+	func _init(data: Dictionary) -> void:
+		stat = Stats.StatType[data["stat"]]
+		type = StatChangeType[data["type"]]
+		value = float(data["value"])
+	
 	func apply(stats: Stats) -> void:
 		return
 
 class Option:
 	var description: String
 	var trigger: int
-	var effect: Array[Effect]
+	var effects: Array[Effect]
+	
+	func _init(data: Dictionary) -> void:
+		description = data["description"]
+		trigger = data["trigger"]
+		effects = []
+		for effectData in data["effects"]:
+			effects.append(Effect.new(effectData))
 
-var id: String
-var condition: Array[Condition]
+var id: int
+var conditions: Array[Condition]
 var weight: int
 var station: Event.Station
 var description: String
 var options: Array[Option]
+
+func _init(data: Dictionary) -> void:
+	id = int(data["id"])
+	conditions = []
+	for conditionData in data["conditions"]:
+		conditions.append(Condition.new(conditionData))
+	weight = int(data["weight"])
+	station = Event.Station[data["station"]]
+	description = data["description"]
+	options = []
 
 # id: str
 # condition: list[condition]
