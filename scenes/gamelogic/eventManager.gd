@@ -22,5 +22,9 @@ static func initEvents() -> void:
 		push_error(FileAccess.get_open_error())
 		return
 
-func _ready():
-	initEvents()
+static func getEvents(stats: Dictionary[Stats.StatType, int]) -> Array[Event]:
+	var res = []
+	for event in allEvents:
+		if event.accept(stats):
+			res.append(event)
+	return res

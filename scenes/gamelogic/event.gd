@@ -25,9 +25,8 @@ class Condition:
 		min = data["min"]
 		max = data["max"]
 	
-	func accept(stats: Stats) -> bool:
-		#if stats.stats[stat] ...
-		return false
+	func accept(stats: Dictionary[Stats.StatType, int]) -> bool:
+		return stats[stat] >= min and stats[stat] <= max
 
 class Effect:
 	var stat: Stats.StatType
@@ -70,6 +69,12 @@ func _init(data: Dictionary) -> void:
 	station = Event.Station[data["station"]]
 	description = data["description"]
 	options = []
+
+func accept(stats: Dictionary[Stats.StatType, int]) -> bool:
+	for condition in conditions:
+		if not condition.accept(stats):
+			return false
+	return true
 
 # id: str
 # condition: list[condition]
