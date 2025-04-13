@@ -18,7 +18,7 @@ static func timerTick() -> void:
 		if events_end_cooldown == 0:
 			events_active = false
 			cancelEvents()
-			events_start_cooldown = 45
+			events_start_cooldown = 30
 	else:
 		if events_start_cooldown > 0:
 			events_start_cooldown -= 1
@@ -33,7 +33,7 @@ static func timerTick() -> void:
 
 static func eventCompleted() -> void:
 	events_active = false
-	events_start_cooldown = 45
+	events_start_cooldown = 30
 	events_end_cooldown = 0
 		
 static func triggerEvents() -> void:
