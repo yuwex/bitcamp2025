@@ -10,7 +10,7 @@ static func timerTick() -> void:
 	time -= 1
 	
 	if time <= 0:
-		pass
+		GlobalSignals.time_up.emit()
 		#time up
 	
 	if events_active:

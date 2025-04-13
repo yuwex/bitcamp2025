@@ -2920,7 +2920,7 @@
 			"id": 65,
 			"conditions": [],
 			"weight": 400,
-			"station": "FOOD",
+			"station": "HACKING",
 			"description": "You ask ChatGPT for help on your project.",
 			"options": [
 				{

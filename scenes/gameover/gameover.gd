@@ -9,9 +9,6 @@ extends Node2D
 @onready var shader_legendary: ShaderMaterial = preload("res://shader/greenhydro.tres")
 @onready var shader_truecoder: ShaderMaterial = preload("res://shader/goldhydrodark.tres")
 
-func _ready():
-	all()
-
 enum Endings {
 	BEST,
 	RIZZLEDIZZLE,

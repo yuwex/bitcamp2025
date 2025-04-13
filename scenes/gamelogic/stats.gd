@@ -36,15 +36,9 @@ func apply_effect(effect: Event.Effect):
 	elif effect.type == Event.StatChangeType.MULTIPLICATIVE:
 		stats[effect.stat] = int(stats[effect.stat] * effect.value)
 	
-	if stats[StatType.HUNGER] <= 0:
+	if stats[StatType.HUNGER] >= 100:
 		GameManager.time = 0
 	if stats[StatType.ENERGY] <= 0:
-		GameManager.time = 0
-	if stats[StatType.KNOWLEDGE] <= 0:
-		GameManager.time = 0
-	if stats[StatType.MORALE] <= 0:
-		GameManager.time = 0
-	if stats[StatType.COMMUNICATION] <= 0:
 		GameManager.time = 0
 	
 	effect_applied.emit(effect)
