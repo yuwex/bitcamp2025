@@ -1,5 +1,9 @@
 extends Sprite2D
 
+# for recieving events
+signal handle_events(events)
+
+# pull up interfaces
 @export var interface_scene : PackedScene = load("res://scenes/station/event interface/eventinterface.tscn")
 
 func _input(event):
