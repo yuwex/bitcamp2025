@@ -13,6 +13,7 @@ static func timerTick() -> void:
 static func triggerEvents() -> void:
 	var stations : Array[Event.Station] = [Event.Station.HACKING, Event.Station.SPONSOR, Event.Station.FOOD, Event.Station.HARDWARE, Event.Station.WORKSHOP, Event.Station.EXIT, Event.Station.PRESENTATION]
 	var events = chooseEvents(stations, Stats.stats, 3)
+	# PASS EVENTS TO STATIONS HERE
 	
 static func chooseEvents(stations: Array[Event.Station], stats: Dictionary[Stats.StatType, int], amount : int) -> Array[Event] :
 	if amount > len(stations):
