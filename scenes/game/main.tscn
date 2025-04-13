@@ -276,6 +276,9 @@ scale = Vector2(1, 1)
 [node name="Table2" parent="Y-Sorted/Decorations" instance=ExtResource("8_lkswk")]
 position = Vector2(33, 189)
 
+[node name="Laptop3" parent="Y-Sorted/Decorations/Table2" instance=ExtResource("10_hwog6")]
+position = Vector2(29, -31)
+
 [node name="Npc3" parent="Y-Sorted/Decorations/Table2" instance=ExtResource("9_ckq83")]
 position = Vector2(92, 14)
 scale = Vector2(-1, 1)
@@ -298,9 +301,6 @@ position = Vector2(35, -28)
 position = Vector2(91, 16)
 rotation = 3.14159
 scale = Vector2(1, -1)
-
-[node name="Laptop" parent="Y-Sorted/Decorations" instance=ExtResource("10_hwog6")]
-position = Vector2(62, 158)
 
 [node name="Statsdisplay" parent="." instance=ExtResource("7_g38uy")]
 z_index = 2
