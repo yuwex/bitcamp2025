@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://78cslb1d1dou"]
+
+[ext_resource type="FontFile" uid="uid://bdi41prsghna4" path="res://assets/PeaberryBase.ttf" id="1_u2e70"]
+[ext_resource type="Script" uid="uid://x08u8qqoq7t4" path="res://scenes/gameover/gameover.gd" id="1_uss00"]
+[ext_resource type="Material" uid="uid://btihnpvllhvhs" path="res://shader/purplehydro.tres" id="2_4sbkp"]
+
+[node name="Gameover" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_uss00")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.134242, 0.0756782, 0.0589878, 1)
+
+[node name="Main" type="Label" parent="."]
+material = ExtResource("2_4sbkp")
+offset_left = 38.0
+offset_top = 36.0
+offset_right = 1115.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("1_u2e70")
+theme_override_font_sizes/font_size = 48
+text = "Your time at Bytecamp has come to an end!"
+
+[node name="Description" type="Label" parent="."]
+offset_left = 95.0
+offset_top = 130.0
+offset_right = 1058.0
+offset_bottom = 406.0
+theme_override_fonts/font = ExtResource("1_u2e70")
+theme_override_font_sizes/font_size = 36
+text = "here's some subtext about what happened during your time at bytecamp"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Categories Won" type="Label" parent="."]
+offset_left = 99.0
+offset_top = 394.0
+offset_right = 1062.0
+offset_bottom = 497.0
+theme_override_fonts/font = ExtResource("1_u2e70")
+theme_override_font_sizes/font_size = 36
+text = "Award:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Award" type="Label" parent="."]
+offset_left = 99.0
+offset_top = 496.0
+offset_right = 1062.0
+offset_bottom = 585.0
+theme_override_fonts/font = ExtResource("1_u2e70")
+theme_override_font_sizes/font_size = 48
+text = "Category"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AwardMeta" type="Label" parent="."]
+offset_left = 914.0
+offset_top = 577.0
+offset_right = 1148.0
+offset_bottom = 641.0
+theme_override_fonts/font = ExtResource("1_u2e70")
+theme_override_font_sizes/font_size = 16
+text = "Award 1/32, Legendary"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
