@@ -2843,6 +2843,73 @@
 					]
 				}
 			]
+		},
+		{
+			"id": 63,
+			"conditions": [],
+			"weight": 800,
+			"station": "HACKING",
+			"description": "Your teammate says his boss needs help stealing the moon. Do you help?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 35.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 64,
+			"conditions": [],
+			"weight": 500,
+			"station": "FOOD",
+			"description": "You and another hacker approach the food table at the same time. Your eyes lock. There's one chicken sandwich left. Do you let them have it?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 15.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -15.0
+						}
+					]
+				}
+			]
 		}
 	]
 }
