@@ -244,7 +244,7 @@ npc_texture = ExtResource("4_iba00")
 
 [node name="HardwareStation" parent="Y-Sorted" instance=ExtResource("4_uaf1y")]
 y_sort_enabled = true
-position = Vector2(47, -324)
+position = Vector2(49, -255)
 station_type = 3
 npc_texture = ExtResource("5_j7lav")
 

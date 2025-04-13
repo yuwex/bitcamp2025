@@ -289,9 +289,9 @@ func find_ending() -> Endings:
 		ending = Endings.ENERGY
 	elif Stats.stats[Stats.StatType.MORALE] <= 0:
 		ending = Endings.MORALE
-	elif Stats.stats[Stats.StatType.COMMUNICATION] <= 3:
+	elif Stats.stats[Stats.StatType.COMMUNICATION] <= -10:
 		ending = Endings.COMMUNICATION
-	elif Stats.stats[Stats.StatType.KNOWLEDGE] <= 3:
+	elif Stats.stats[Stats.StatType.KNOWLEDGE] <= -10:
 		ending = Endings.KNOWLEDGE
 	
 	if ending:

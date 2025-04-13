@@ -3232,35 +3232,35 @@
 		},
 		{
 			"id": 839,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "PRESENTATION",
 			"description": "You attend the Dino Hunt kickoff, where you're tasked with finding fossils left by dinosaurs!",
 			"options": [
 				{
 					"description": "Take detailed notes about the fossils.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "KNOWLEDGE",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 3
+							"type": "ADDITIVE",
+							"value": 3
 						}
 					]
 				},
 				{
 					"description": "Focus on networking with the attendees.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "COMMUNICATION",
-							"change_type": "ADDITIVE",
-							"change_value": 4
+							"type": "ADDITIVE",
+							"value": 4
 						}
 					]
 				}
@@ -3268,40 +3268,40 @@
 		},
 		{
 			"id": 9994,
-			"condition": [],
+			"conditions": [],
 			"weight": 6,
 			"station": "PRESENTATION",
 			"description": "You can attend the opening ceremony, or work on your project.",
 			"options": [
 				{
 					"description": "Attend the opening ceremony and meet other participants.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "COMMUNICATION",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 4
+							"type": "ADDITIVE",
+							"value": 4
 						}
 					]
 				},
 				{
 					"description": "Work on your project and make progress.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "PROJ_USER_EXPERIENCE",
-							"change_type": "ADDITIVE",
-							"change_value": 7
+							"type": "ADDITIVE",
+							"value": 7
 						},
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -3
+							"type": "ADDITIVE",
+							"value": -3
 						}
 					]
 				}
@@ -3309,40 +3309,40 @@
 		},
 		{
 			"id": 999,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "WORKSHOP",
 			"description": "You attend the Jurassic Joust event. How much pain do you want to inflict on friends and foes alike?",
 			"options": [
 				{
 					"description": "Go all out, hurt your opponents with every move.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 15
+							"type": "ADDITIVE",
+							"value": 15
 						},
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -15
+							"type": "ADDITIVE",
+							"value": -15
 						}
 					]
 				},
 				{
 					"description": "Play carefully, avoid inflicting too much damage.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 3
+							"type": "ADDITIVE",
+							"value": 3
 						},
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -3
+							"type": "ADDITIVE",
+							"value": -3
 						}
 					]
 				}
@@ -3350,35 +3350,35 @@
 		},
 		{
 			"id": 9992,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "FOOD",
 			"description": "You miss breakfast. Do you crash out?",
 			"options": [
 				{
 					"description": "CRASH OUT!!!!!!!!!!",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -50
+							"type": "ADDITIVE",
+							"value": -50
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": -50
+							"type": "ADDITIVE",
+							"value": -50
 						}
 					]
 				},
 				{
 					"description": "Grab a quick snack and keep going.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						}
 					]
 				}
@@ -3386,51 +3386,51 @@
 		},
 		{
 			"id": 1,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "WORKSHOP",
 			"description": "You and your team attempt to build the tallest marshmallow tower, but it falls.",
 			"options": [
 				{
 					"description": "Rebuild the tower with a new strategy.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "PROJ_TECHNICAL",
-							"change_type": "ADDITIVE",
-							"change_value": 4
+							"type": "ADDITIVE",
+							"value": 4
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 3
+							"type": "ADDITIVE",
+							"value": 3
 						}
 					]
 				},
 				{
 					"description": "Give up and move on to something else.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": -5
+							"type": "ADDITIVE",
+							"value": -5
 						}
 					]
 				},
 				{
 					"description": "Try again, but focus on the details.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "PROJ_ORIGINALITY",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						},
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -3
+							"type": "ADDITIVE",
+							"value": -3
 						}
 					]
 				}
@@ -3438,56 +3438,56 @@
 		},
 		{
 			"id": 1,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "WORKSHOP",
 			"description": "You and your nemesis go head-to-head in the horse race. How much energy do you expend to beat them?",
 			"options": [
 				{
 					"description": "Push yourself to the limit and win at all costs.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -15
+							"type": "ADDITIVE",
+							"value": -15
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 8
+							"type": "ADDITIVE",
+							"value": 8
 						}
 					]
 				},
 				{
 					"description": "Play strategically and conserve energy for the final stretch.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -8
+							"type": "ADDITIVE",
+							"value": -8
 						},
 						{
 							"stat": "PROJ_TECHNICAL",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						}
 					]
 				},
 				{
 					"description": "Take it easy and let your nemesis win.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -4
+							"type": "ADDITIVE",
+							"value": -4
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": -3
+							"type": "ADDITIVE",
+							"value": -3
 						}
 					]
 				}
@@ -3495,56 +3495,56 @@
 		},
 		{
 			"id": 2,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "PRESENTATION",
 			"description": "You attend the alumni panel. What do you learn?",
 			"options": [
 				{
 					"description": "Gain insights about career paths and industry trends.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "KNOWLEDGE",
-							"change_type": "ADDITIVE",
-							"change_value": 10
+							"type": "ADDITIVE",
+							"value": 10
 						},
 						{
 							"stat": "COMMUNICATION",
-							"change_type": "ADDITIVE",
-							"change_value": 6
+							"type": "ADDITIVE",
+							"value": 6
 						}
 					]
 				},
 				{
 					"description": "Learn about the challenges alumni faced in their careers.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "KNOWLEDGE",
-							"change_type": "ADDITIVE",
-							"change_value": 7
+							"type": "ADDITIVE",
+							"value": 7
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 4
+							"type": "ADDITIVE",
+							"value": 4
 						}
 					]
 				},
 				{
 					"description": "Build connections with alumni and learn about networking.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "COMMUNICATION",
-							"change_type": "ADDITIVE",
-							"change_value": 8
+							"type": "ADDITIVE",
+							"value": 8
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 3
+							"type": "ADDITIVE",
+							"value": 3
 						}
 					]
 				}
@@ -3552,56 +3552,56 @@
 		},
 		{
 			"id": 3,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "WORKSHOP",
 			"description": "You attend the colorwar. Are you red, green, or blue?",
 			"options": [
 				{
 					"description": "You join the red team and aim to dominate.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 7
+							"type": "ADDITIVE",
+							"value": 7
 						},
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -5
+							"type": "ADDITIVE",
+							"value": -5
 						}
 					]
 				},
 				{
 					"description": "You join the green team and use strategy over brute force.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						},
 						{
 							"stat": "KNOWLEDGE",
-							"change_type": "ADDITIVE",
-							"change_value": 3
+							"type": "ADDITIVE",
+							"value": 3
 						}
 					]
 				},
 				{
 					"description": "You join the blue team and focus on teamwork.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 6
+							"type": "ADDITIVE",
+							"value": 6
 						},
 						{
 							"stat": "COMMUNICATION",
-							"change_type": "ADDITIVE",
-							"change_value": 4
+							"type": "ADDITIVE",
+							"value": 4
 						}
 					]
 				}
@@ -3609,61 +3609,61 @@
 		},
 		{
 			"id": 4,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "WORKSHOP",
 			"description": "You attend the Jurassic Strike event. How would you kill the dinosaurs?",
 			"options": [
 				{
 					"description": "Use tranquilizers and capture them for study.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "PROJ_TECHNICAL",
-							"change_type": "ADDITIVE",
-							"change_value": 9
+							"type": "ADDITIVE",
+							"value": 9
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						}
 					]
 				},
 				{
 					"description": "Use advanced weapons and fight them head-on.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "PROJ_ORIGINALITY",
-							"change_type": "ADDITIVE",
-							"change_value": 7
+							"type": "ADDITIVE",
+							"value": 7
 						},
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -10
+							"type": "ADDITIVE",
+							"value": -10
 						}
 					]
 				},
 				{
 					"description": "Meteor. (very exhausting)",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "KNOWLEDGE",
-							"change_type": "ADDITIVE",
-							"change_value": 40
+							"type": "ADDITIVE",
+							"value": 40
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 40
+							"type": "ADDITIVE",
+							"value": 40
 						},
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": -30
+							"type": "ADDITIVE",
+							"value": -30
 						}
 					]
 				}
@@ -3671,51 +3671,51 @@
 		},
 		{
 			"id": 5,
-			"condition": [],
+			"conditions": [],
 			"weight": 600,
 			"station": "WORKSHOP",
 			"description": "You hit and demolish the Prehistoric Pinata. What do you find inside?",
 			"options": [
 				{
 					"description": "You find a stash of snacks and treats.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "ENERGY",
-							"change_type": "ADDITIVE",
-							"change_value": 12
+							"type": "ADDITIVE",
+							"value": 12
 						}
 					]
 				},
 				{
 					"description": "You find a rare collectible item worth a lot.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "KNOWLEDGE",
-							"change_type": "ADDITIVE",
-							"change_value": 6
+							"type": "ADDITIVE",
+							"value": 6
 						},
 						{
 							"stat": "MORALE",
-							"change_type": "ADDITIVE",
-							"change_value": 3
+							"type": "ADDITIVE",
+							"value": 3
 						}
 					]
 				},
 				{
 					"description": "You find an ancient artifact with mysterious powers.",
-					"trigger": null,
+					"trigger": -1,
 					"effects": [
 						{
 							"stat": "PROJ_USER_EXPERIENCE",
-							"change_type": "ADDITIVE",
-							"change_value": 10
+							"type": "ADDITIVE",
+							"value": 10
 						},
 						{
 							"stat": "KNOWLEDGE",
-							"change_type": "ADDITIVE",
-							"change_value": 5
+							"type": "ADDITIVE",
+							"value": 5
 						}
 					]
 				}
