@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vnap5f26wrsa"]
+[gd_scene load_steps=15 format=3 uid="uid://cbtahsxpm84bl"]
 
 [ext_resource type="Script" uid="uid://cm4j5evwdkqlr" path="res://scenes/game/main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dygs6yuvflrfx" path="res://assets/environment.png" id="2_oekm8"]
@@ -6,7 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://iobqk5loxvgn" path="res://assets/janeHackaThon.png" id="4_iba00"]
 [ext_resource type="PackedScene" uid="uid://c1pitfqy7hf6s" path="res://scenes/station/station.tscn" id="4_uaf1y"]
 [ext_resource type="Texture2D" uid="uid://d0lu073124ni6" path="res://assets/joeThonaHack.png" id="5_j7lav"]
+[ext_resource type="PackedScene" uid="uid://dyalxlveilsok" path="res://scenes/decorations/teammate.tscn" id="6_lkswk"]
+[ext_resource type="PackedScene" uid="uid://b75i5y7v74yk8" path="res://scenes/decorations/three.tscn" id="7_4c6dq"]
 [ext_resource type="PackedScene" uid="uid://vwmk2hglrchl" path="res://scenes/statsdisplay/statsdisplay.tscn" id="7_g38uy"]
+[ext_resource type="PackedScene" uid="uid://yqgiga7cbqlr" path="res://scenes/decorations/table.tscn" id="8_lkswk"]
+[ext_resource type="PackedScene" uid="uid://rspm88h86idk" path="res://scenes/decorations/four.tscn" id="9_ckq83"]
+[ext_resource type="PackedScene" uid="uid://80q14k0a0tnb" path="res://scenes/decorations/laptop.tscn" id="10_hwog6"]
+[ext_resource type="PackedScene" uid="uid://bvbjym0lmt1ff" path="res://scenes/decorations/two.tscn" id="11_43pvk"]
+[ext_resource type="PackedScene" uid="uid://bib3kl7rg45xs" path="res://scenes/decorations/one.tscn" id="12_7a7dk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -238,11 +245,51 @@ station_type = 2
 
 [node name="HackingStation" parent="Y-Sorted" instance=ExtResource("4_uaf1y")]
 y_sort_enabled = true
-position = Vector2(448, 79)
+position = Vector2(419, 62)
 npc_texture = ExtResource("2_oekm8")
+
+[node name="Teammate" parent="Y-Sorted/HackingStation" instance=ExtResource("6_lkswk")]
+position = Vector2(97, 44)
+scale = Vector2(5, 5)
 
 [node name="Player" parent="Y-Sorted" instance=ExtResource("3_yd8kv")]
 y_sort_enabled = true
+
+[node name="Decorations" type="Node2D" parent="Y-Sorted"]
+position = Vector2(54, -28)
+
+[node name="Npc2" parent="Y-Sorted/Decorations" instance=ExtResource("7_4c6dq")]
+position = Vector2(-57, 143)
+scale = Vector2(1, 1)
+
+[node name="Table2" parent="Y-Sorted/Decorations" instance=ExtResource("8_lkswk")]
+position = Vector2(33, 189)
+
+[node name="Npc3" parent="Y-Sorted/Decorations/Table2" instance=ExtResource("9_ckq83")]
+position = Vector2(92, 14)
+scale = Vector2(-1, 1)
+
+[node name="Laptop2" parent="Y-Sorted/Decorations/Table2" instance=ExtResource("10_hwog6")]
+position = Vector2(-33, -42)
+scale = Vector2(-1.5, 1.5)
+
+[node name="Npc" parent="Y-Sorted/Decorations" instance=ExtResource("11_43pvk")]
+position = Vector2(-304, 100)
+scale = Vector2(1, 1)
+
+[node name="Table" parent="Y-Sorted/Decorations" instance=ExtResource("8_lkswk")]
+position = Vector2(-265, 168)
+
+[node name="Laptop" parent="Y-Sorted/Decorations/Table" instance=ExtResource("10_hwog6")]
+position = Vector2(35, -28)
+
+[node name="Npc" parent="Y-Sorted/Decorations/Table" instance=ExtResource("12_7a7dk")]
+position = Vector2(91, 16)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Laptop" parent="Y-Sorted/Decorations" instance=ExtResource("10_hwog6")]
+position = Vector2(62, 158)
 
 [node name="Statsdisplay" parent="." instance=ExtResource("7_g38uy")]
 z_index = 2
