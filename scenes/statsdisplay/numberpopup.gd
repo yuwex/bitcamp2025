@@ -1,10 +1,10 @@
+class_name NumberPopup
 extends Node2D
 
-@onready var label = $Label
+@onready var label: Label = $Label
 
 # Callee-set
 var color: Color
-var pos: Vector2
 var val: String
 
 # Internal
@@ -20,8 +20,9 @@ func _ready() -> void:
 	#color = Color.BLUE
 	
 	vx = randf_range(-5, 5) * 5
-	vy = randf_range(-3, -5) * 50
-	position = pos
+	vy = randf_range(-3, -5) * 30
+	
+	label.text = val
 	
 	target_color = color
 	end_color = Color(target_color.r, target_color.g, target_color.b, 1.0)
