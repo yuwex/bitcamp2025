@@ -14,13 +14,10 @@ static func initEvents() -> void:
 			var data = json.data
 			for eventData in data["events"]:
 				allEvents.append(Event.new(eventData))
-				return
 		else:
 			push_error(json.get_error_message())
-			return
 	else:
 		push_error(FileAccess.get_open_error())
-		return
 
 static func getEvents(stations: Array[Event.Station], stats: Dictionary[Stats.StatType, int]) -> Array[Event]:
 	var res : Array[Event] = []
