@@ -17,6 +17,8 @@ extends Node2D
 @onready var proj_originality_score: Label = $"Project Container/ScoreOriginality"
 @onready var proj_ux_score: Label = $"Project Container/ScoreUX"
 
+@onready var time : Label = $Time
+
 @export var test_score: int = 0
 
 var COLOR_BAD: Color = Color.DARK_RED
