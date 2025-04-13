@@ -1748,7 +1748,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 5.0
+							"value": -5.0
 						}
 					]
 				}
@@ -2051,7 +2051,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 50.0
+							"value": -10.0
 						},
 						{
 							"stat": "ENERGY",
@@ -2443,7 +2443,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 80.0
+							"value": -80.0
 						},
 						{
 							"stat": "MORALE",
@@ -2459,7 +2459,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 30.0
+							"value": -30.0
 						}
 					]
 				}
@@ -2883,7 +2883,7 @@
 		{
 			"id": 64,
 			"conditions": [],
-			"weight": 500,
+			"weight": 700,
 			"station": "FOOD",
 			"description": "You and another hacker approach the food table at the same time. Your eyes lock. There's one chicken sandwich left.",
 			"options": [
