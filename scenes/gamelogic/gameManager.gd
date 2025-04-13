@@ -30,7 +30,7 @@ static func timerTick() -> void:
 	
 	person_stats_timer -= 1
 	if person_stats_timer <= 0:
-		var human_effects = [
+		var human_effects : Array[Event.Effect]= [
 			Event.Effect.new({"stat" : "HUNGER", "type" : "ADDITIVE", "value" : 5}),
 			Event.Effect.new({"stat" : "ENERGY", "type" : "ADDITIVE", "value" : -5}),
 			Event.Effect.new({"stat" : "MORALE", "type" : "ADDITIVE", "value" : -5})
