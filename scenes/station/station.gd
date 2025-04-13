@@ -36,10 +36,6 @@ func _ready():
 		npc_sprite.position = Vector2(npc_sprite.position[0] - 5, npc_sprite.position[1] + 10)
 		npc_sprite.z_index += 1
 
-
-		
-		
-	
 func _on_start_events(events: Array[Event]):
 	for event in events:
 		if event.station == station_type:
