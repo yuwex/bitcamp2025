@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbtahsxpm84bl"]
+[gd_scene load_steps=18 format=3 uid="uid://cbtahsxpm84bl"]
 
 [ext_resource type="Script" uid="uid://cm4j5evwdkqlr" path="res://scenes/game/main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dygs6yuvflrfx" path="res://assets/environment.png" id="2_oekm8"]
@@ -14,6 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://80q14k0a0tnb" path="res://scenes/decorations/laptop.tscn" id="10_hwog6"]
 [ext_resource type="PackedScene" uid="uid://bvbjym0lmt1ff" path="res://scenes/decorations/two.tscn" id="11_43pvk"]
 [ext_resource type="PackedScene" uid="uid://bib3kl7rg45xs" path="res://scenes/decorations/one.tscn" id="12_7a7dk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkswk"]
+size = Vector2(1271, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckq83"]
+size = Vector2(1274, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwog6"]
+size = Vector2(36, 670)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -249,6 +258,7 @@ position = Vector2(419, 62)
 npc_texture = ExtResource("2_oekm8")
 
 [node name="Teammate" parent="Y-Sorted/HackingStation" instance=ExtResource("6_lkswk")]
+y_sort_enabled = true
 position = Vector2(97, 44)
 scale = Vector2(5, 5)
 
@@ -256,6 +266,7 @@ scale = Vector2(5, 5)
 y_sort_enabled = true
 
 [node name="Decorations" type="Node2D" parent="Y-Sorted"]
+y_sort_enabled = true
 position = Vector2(54, -28)
 
 [node name="Npc2" parent="Y-Sorted/Decorations" instance=ExtResource("7_4c6dq")]
@@ -293,5 +304,23 @@ position = Vector2(62, 158)
 
 [node name="Statsdisplay" parent="." instance=ExtResource("7_g38uy")]
 z_index = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(575.5, 686)
+shape = SubResource("RectangleShape2D_lkswk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(573, -17)
+shape = SubResource("RectangleShape2D_ckq83")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-31, 325)
+shape = SubResource("RectangleShape2D_hwog6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1183, 325)
+shape = SubResource("RectangleShape2D_hwog6")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
