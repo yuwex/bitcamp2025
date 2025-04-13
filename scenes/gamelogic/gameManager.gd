@@ -1,14 +1,31 @@
 class_name GameManager
 
-static var time : int = 0;
-static var event_cooldown : int = 45;
+static var time : int = 36 * 60
+static var events_start_cooldown : int = 45
+static var events_active : bool = false
+static var events_end_cooldown : int = 30
 
 static func timerTick() -> void: 
-	time += 1
-	event_cooldown -= 1
+	time -= 1
 	
-	if event_cooldown == 0:
-		triggerEvents()
+	if time <= 0:
+		pass
+		#time up
+	
+	if events_active:
+		if events_end_cooldown > 0:
+			events_end_cooldown -= 1
+		if events_end_cooldown == 0:
+			events_active = false
+			#cancel events
+			events_start_cooldown = 45
+	else:
+		if events_start_cooldown > 0:
+			events_start_cooldown -= 1
+		if events_start_cooldown == 0:
+			events_active = true
+			triggerEvents()
+			events_end_cooldown = 30
 		
 static func triggerEvents() -> void:
 	var stations : Array[Event.Station] = [Event.Station.HACKING, Event.Station.SPONSOR, Event.Station.FOOD, Event.Station.HARDWARE, Event.Station.WORKSHOP, Event.Station.EXIT, Event.Station.PRESENTATION]
