@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhuw5grh2d5rr"]
+
+[ext_resource type="Script" uid="uid://bgv5olrmke42y" path="res://scenes/statsdisplay/numberpopup.gd" id="1_cw67g"]
+[ext_resource type="FontFile" uid="uid://bdi41prsghna4" path="res://assets/PeaberryBase.ttf" id="2_i0rkj"]
+
+[node name="Numberpopup" type="Node2D"]
+texture_filter = 1
+position = Vector2(0, 5)
+script = ExtResource("1_cw67g")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 100.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_i0rkj")
+theme_override_font_sizes/font_size = 16
+text = "+20"
