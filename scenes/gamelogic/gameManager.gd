@@ -4,6 +4,7 @@ static var time : int = 36 * 60
 static var events_start_cooldown : int = 5
 static var events_active : bool = false
 static var events_end_cooldown : int = 0
+static var person_stats_timer : int = 60
 
 static func timerTick() -> void: 
 	time -= 1
@@ -27,9 +28,15 @@ static func timerTick() -> void:
 			triggerEvents()
 			events_end_cooldown = 30
 	
-	print("Time left: ", time)
-	print("Until next event: ", events_start_cooldown)
-	print("Until event end: ", events_end_cooldown)
+	person_stats_timer -= 1
+	if person_stats_timer <= 0:
+		var human_effects = [
+			Event.Effect.new({"stat" : "HUNGER", "type" : "ADDITIVE", "value" : 5}),
+			Event.Effect.new({"stat" : "ENERGY", "type" : "ADDITIVE", "value" : -5}),
+			Event.Effect.new({"stat" : "MORALE", "type" : "ADDITIVE", "value" : -5})
+		]
+		Stats.new().apply_effects(human_effects)
+		person_stats_timer = 60
 
 static func eventCompleted() -> void:
 	events_active = false
