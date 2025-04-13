@@ -22,7 +22,6 @@ static func chooseEvents(stations: Array[Event.Station], stats: Dictionary[Stats
 	var res : Array[Event] = []
 	for i in range(amount):
 		res.append(chooseEvent(stations, stats))
-		print(res[len(res) - 1].id)
 		stations.erase(res[len(res) - 1].station)
 	
 	return res
