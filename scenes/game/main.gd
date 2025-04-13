@@ -8,6 +8,7 @@ func _ready() -> void:
 	GlobalSignals.connect("event_started", _on_event_started)
 	GlobalSignals.connect("event_completed", _on_event_completed)
 	GlobalSignals.connect("time_up", _on_time_up)
+	GlobalSignals.connect("game_start", _on_start)
 
 func _on_timer_timeout() -> void:
 	GameManager.timerTick()
@@ -31,3 +32,6 @@ func _process(bru) -> void:
 func _on_time_up() -> void:
 	$Gameover.all()
 	$Gameover.visible = true
+
+func _on_start() -> void:
+	timer.start()
