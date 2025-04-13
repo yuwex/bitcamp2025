@@ -13,10 +13,10 @@ var items: Array[Label] = []
 
 func _ready() -> void:
 	
-	### TESTING
-	EventManager.initEvents()
-	event = EventManager.allEvents[0]
-	###
+	#### TESTING
+	#EventManager.initEvents()
+	#event = EventManager.allEvents[0]
+	####
 	
 	assert(event, "Event must be passed")
 	
