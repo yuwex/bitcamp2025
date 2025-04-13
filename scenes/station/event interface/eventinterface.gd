@@ -1,8 +1,6 @@
 class_name EventInterface
 extends CanvasLayer
 
-signal completed
-
 var event: Event
 
 var buttons: Array[Button] = []
@@ -15,10 +13,10 @@ var items: Array[Label] = []
 
 func _ready() -> void:
 	
-	## TESTING
+	### TESTING
 	EventManager.initEvents()
 	event = EventManager.allEvents[0]
-	##
+	###
 	
 	assert(event, "Event must be passed")
 	
@@ -90,4 +88,4 @@ func option_chosen(option: Event.Option):
 	
 	await get_tree().create_timer(1).timeout
 	
-	completed.emit()
+	GlobalSignals.event_completed.emit()

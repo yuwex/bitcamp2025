@@ -25,6 +25,7 @@ static var stats: Dictionary[StatType, int] = {
 }
 
 func apply_effects(effects: Array[Event.Effect]):
+	GlobalSignals.effects_applied.emit(effects)
 	for e in effects:
 		apply_effect(e)
 
