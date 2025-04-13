@@ -7,6 +7,7 @@ extends Node2D
 
 func _ready():
 	GlobalSignals.connect("start_events", _on_start_events)
+	GlobalSignals.connect("events_ignored", _on_events_ignored)
 	notification.visible = false
 	
 func _on_start_events(events: Array[Event]):
@@ -15,3 +16,7 @@ func _on_start_events(events: Array[Event]):
 			notification.visible = true
 			interact.has_event = true
 			interact.event = event
+
+func _on_events_ignored():
+	notification.visible = false
+	interact.has_event = false

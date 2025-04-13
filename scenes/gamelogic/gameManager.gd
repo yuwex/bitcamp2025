@@ -1,9 +1,9 @@
 class_name GameManager
 
 static var time : int = 36 * 60
-static var events_start_cooldown : int = 45
+static var events_start_cooldown : int = 5
 static var events_active : bool = false
-static var events_end_cooldown : int = 30
+static var events_end_cooldown : int = 0
 
 static func timerTick() -> void: 
 	time -= 1
@@ -17,7 +17,7 @@ static func timerTick() -> void:
 			events_end_cooldown -= 1
 		if events_end_cooldown == 0:
 			events_active = false
-			#cancel events
+			cancelEvents()
 			events_start_cooldown = 45
 	else:
 		if events_start_cooldown > 0:
@@ -26,11 +26,18 @@ static func timerTick() -> void:
 			events_active = true
 			triggerEvents()
 			events_end_cooldown = 30
+	
+	print(time)
+	print(events_start_cooldown)
+	print(events_end_cooldown)
 		
 static func triggerEvents() -> void:
 	var stations : Array[Event.Station] = [Event.Station.HACKING, Event.Station.SPONSOR, Event.Station.FOOD, Event.Station.HARDWARE, Event.Station.WORKSHOP, Event.Station.EXIT, Event.Station.PRESENTATION]
 	var events = chooseEvents(stations, Stats.stats, 3)
 	GlobalSignals.emit_signal("start_events", events)
+
+static func cancelEvents() -> void:
+	GlobalSignals.emit_signal("events_ignored")
 	
 static func chooseEvents(stations: Array[Event.Station], stats: Dictionary[Stats.StatType, int], amount : int) -> Array[Event] :
 	if amount > len(stations):
