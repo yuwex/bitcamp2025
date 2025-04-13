@@ -31,8 +31,8 @@ func apply_effects(effects: Array[Event.Effect]):
 func apply_effect(effect: Event.Effect):
 	
 	if effect.type == Event.StatChangeType.ADDITIVE:
-		stats[effect.stat] += effect.value
+		stats[effect.stat] += int(effect.value)
 	elif effect.type == Event.StatChangeType.MULTIPLICATIVE:
-		stats[effect.stat] *= effect.value
+		stats[effect.stat] = int(stats[effect.stat] * effect.value)
 	
 	effect_applied.emit(effect)
