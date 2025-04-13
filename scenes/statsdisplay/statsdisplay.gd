@@ -24,6 +24,7 @@ var COLOR_GOOD: Color = Color.SEA_GREEN
 var COLOR_NORMAL: Color = Color.AZURE
 
 var stats: Dictionary[Stats.StatType, float] = {}
+
 @onready var labels: Dictionary[Stats.StatType, Label] = {
 	Stats.StatType.HUNGER: hunger_label,
 	Stats.StatType.ENERGY: energy_label,
@@ -51,8 +52,7 @@ func _ready() -> void:
 	sb.bg_color = Color.DARK_RED
 	hunger_bar.add_theme_stylebox_override('fill', sb)
 	
-	
-	
+	GlobalSignals.connect("effects_applied", _on_effects_applied)
 
 func _process(delta: float):
 	for stat in stats:
@@ -85,11 +85,15 @@ func _process(delta: float):
 	
 	### TESTING
 
-	if Input.is_action_just_pressed('up'):	
-		var effect = Event.Effect.new({'stat': Stats.StatType.keys().pick_random(), 'value': randi_range(-10, 10), 'type': 'ADDITIVE'})
-		_on_effect(effect)
+	#if Input.is_action_just_pressed('up'):	
+		#var effect = Event.Effect.new({'stat': Stats.StatType.keys().pick_random(), 'value': randi_range(-10, 10), 'type': 'ADDITIVE'})
+		#on_effect(effect)
 
-func _on_effect(effect: Event.Effect):
+func _on_effects_applied(effects: Array[Event.Effect]):
+	for effect in effects:
+		on_effect(effect)
+
+func on_effect(effect: Event.Effect):
 		
 	var positive = ((effect.type == Event.StatChangeType.MULTIPLICATIVE 
 		and effect.value >= 1) 
