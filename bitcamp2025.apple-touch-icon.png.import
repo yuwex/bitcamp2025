@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkb5pnhnvm7sc"
-path="res://.godot/imported/bitcamp2025.apple-touch-icon.png-cc592b038d5b413da8f43ee6cd0a4723.ctex"
+uid="uid://cy2qbgnatt5s8"
+path="res://.godot/imported/bitcamp2025.apple-touch-icon.png-7786986a14f9435ee0b7db0d45ab0302.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/bitcamp2025.apple-touch-icon.png"
-dest_files=["res://.godot/imported/bitcamp2025.apple-touch-icon.png-cc592b038d5b413da8f43ee6cd0a4723.ctex"]
+source_file="res://bitcamp2025.apple-touch-icon.png"
+dest_files=["res://.godot/imported/bitcamp2025.apple-touch-icon.png-7786986a14f9435ee0b7db0d45ab0302.ctex"]
 
 [params]
 

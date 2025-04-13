@@ -42,7 +42,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_uirwp")
 theme_override_font_sizes/font_size = 16
-text = "Energy ⚡︎"
+text = "Energy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -80,7 +80,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_uirwp")
 theme_override_font_sizes/font_size = 16
-text = "Morale ☻"
+text = "Morale"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -118,7 +118,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_uirwp")
 theme_override_font_sizes/font_size = 16
-text = "Hunger ☕︎"
+text = "Hunger"
 horizontal_alignment = 1
 vertical_alignment = 1
 

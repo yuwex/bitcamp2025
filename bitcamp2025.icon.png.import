@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c64mmxfe8712q"
-path="res://.godot/imported/bitcamp2025.icon.png-107fea157d75c45564f35c5005739729.ctex"
+uid="uid://biytmbnctrj1x"
+path="res://.godot/imported/bitcamp2025.icon.png-baa11119f7089e4bdf57c5ccb13337fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/bitcamp2025.icon.png"
-dest_files=["res://.godot/imported/bitcamp2025.icon.png-107fea157d75c45564f35c5005739729.ctex"]
+source_file="res://bitcamp2025.icon.png"
+dest_files=["res://.godot/imported/bitcamp2025.icon.png-baa11119f7089e4bdf57c5ccb13337fe.ctex"]
 
 [params]
 
