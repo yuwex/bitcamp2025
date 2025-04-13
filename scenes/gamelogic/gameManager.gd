@@ -30,9 +30,14 @@ static func timerTick() -> void:
 	print("Time left: ", time)
 	print("Until next event: ", events_start_cooldown)
 	print("Until event end: ", events_end_cooldown)
+
+static func eventCompleted() -> void:
+	events_active = false
+	events_start_cooldown = 45
+	events_end_cooldown = 0
 		
 static func triggerEvents() -> void:
-	var stations : Array[Event.Station] = [Event.Station.HACKING, Event.Station.SPONSOR, Event.Station.FOOD, Event.Station.HARDWARE, Event.Station.WORKSHOP, Event.Station.EXIT, Event.Station.PRESENTATION]
+	var stations : Array[Event.Station] = [Event.Station.HACKING, Event.Station.SPONSOR, Event.Station.FOOD, Event.Station.HARDWARE, Event.Station.WORKSHOP]
 	var events = chooseEvents(stations, Stats.stats, 3)
 	GlobalSignals.emit_signal("start_events", events)
 

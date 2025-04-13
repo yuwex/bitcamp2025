@@ -14,4 +14,5 @@ func _on_event_started(event) -> void:
 	timer.paused = true
 
 func _on_event_completed() -> void:
+	GameManager.eventCompleted()
 	timer.paused = false
