@@ -1,6 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1pitfqy7hf6s"]
+[gd_scene load_steps=5 format=3 uid="uid://c1pitfqy7hf6s"]
 
-[ext_resource type="Script" uid="uid://bexn65cbyj7fm" path="res://scenes/station/station.gd" id="1_fwkoa"]
+[ext_resource type="Texture2D" uid="uid://dygs6yuvflrfx" path="res://assets/environment.png" id="2_2tl6a"]
+[ext_resource type="Texture2D" uid="uid://bfo3g5bmi0m3g" path="res://assets/janeThonaHack.png" id="3_5a57x"]
+[ext_resource type="Script" uid="uid://dka1qhxyw51pi" path="res://scenes/station/station interaction/interact.gd" id="4_5a57x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tl6a"]
+size = Vector2(160.5, 81)
 
 [node name="Station" type="Node2D"]
-script = ExtResource("1_fwkoa")
+
+[node name="TableSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(270, 133)
+scale = Vector2(5, 5)
+texture = ExtResource("3_5a57x")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Table" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Table"]
+texture_filter = 1
+position = Vector2(286, 197)
+scale = Vector2(5, 5)
+texture = ExtResource("2_2tl6a")
+region_enabled = true
+region_rect = Rect2(0, 32, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+position = Vector2(285.75, 197.5)
+shape = SubResource("RectangleShape2D_2tl6a")
+
+[node name="Notification" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(321, 68)
+scale = Vector2(3, 3)
+texture = ExtResource("2_2tl6a")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+script = ExtResource("4_5a57x")

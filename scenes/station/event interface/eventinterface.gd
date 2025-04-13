@@ -1,3 +1,4 @@
+class_name EventInterface
 extends CanvasLayer
 
 signal completed
