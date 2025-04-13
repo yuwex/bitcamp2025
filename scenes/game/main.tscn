@@ -206,34 +206,45 @@ texture = ExtResource("2_oekm8")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 
-[node name="WorkshopStation" parent="." instance=ExtResource("4_uaf1y")]
-position = Vector2(-320, -197)
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Y-Sorted" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(587, 411)
+
+[node name="WorkshopStation" parent="Y-Sorted" instance=ExtResource("4_uaf1y")]
+y_sort_enabled = true
+position = Vector2(-453, -55)
 station_type = 4
 
-[node name="SponsorStation" parent="." instance=ExtResource("4_uaf1y")]
-position = Vector2(-80, -197)
+[node name="SponsorStation" parent="Y-Sorted" instance=ExtResource("4_uaf1y")]
+y_sort_enabled = true
+position = Vector2(-234, -266)
 station_type = 1
 npc_texture = ExtResource("4_iba00")
 
-[node name="HardwareStation" parent="." instance=ExtResource("4_uaf1y")]
-position = Vector2(160, -197)
+[node name="HardwareStation" parent="Y-Sorted" instance=ExtResource("4_uaf1y")]
+y_sort_enabled = true
+position = Vector2(47, -324)
 station_type = 3
 npc_texture = ExtResource("5_j7lav")
 
-[node name="FoodStation" parent="." instance=ExtResource("4_uaf1y")]
-position = Vector2(400, -197)
+[node name="FoodStation" parent="Y-Sorted" instance=ExtResource("4_uaf1y")]
+y_sort_enabled = true
+position = Vector2(346, -220)
 station_type = 2
 
-[node name="HackingStation" parent="." instance=ExtResource("4_uaf1y")]
-position = Vector2(448, 91)
+[node name="HackingStation" parent="Y-Sorted" instance=ExtResource("4_uaf1y")]
+y_sort_enabled = true
+position = Vector2(448, 79)
 npc_texture = ExtResource("2_oekm8")
 
-[node name="Player" parent="." instance=ExtResource("3_yd8kv")]
-position = Vector2(324, 484)
-
-[node name="Timer" type="Timer" parent="."]
-autostart = true
+[node name="Player" parent="Y-Sorted" instance=ExtResource("3_yd8kv")]
+y_sort_enabled = true
 
 [node name="Statsdisplay" parent="." instance=ExtResource("7_g38uy")]
+z_index = 2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
