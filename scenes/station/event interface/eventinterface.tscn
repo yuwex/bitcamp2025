@@ -15,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.125929, 0.273209, 0.15731, 0.482353)]
+"values": [Color(0.12549, 0.27451, 0.156863, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -27,7 +27,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.0]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_m8ahj"]
@@ -236,6 +236,8 @@ text = "do you want to eat an evil chic-fil-et sandwich?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
 metadata/_edit_group_ = true
 
 [node name="DescriptionBox" type="ColorRect" parent="Description"]
@@ -250,7 +252,7 @@ offset_right = 595.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.99, 0.99)
-color = Color(0.125929, 0.273209, 0.15731, 0.482353)
+color = Color(0.12549, 0.27451, 0.156863, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Description"]
 libraries = {
