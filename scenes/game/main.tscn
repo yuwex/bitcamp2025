@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://vnap5f26wrsa"]
+[gd_scene load_steps=5 format=3 uid="uid://vnap5f26wrsa"]
 
 [ext_resource type="Script" uid="uid://cm4j5evwdkqlr" path="res://scenes/game/main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dygs6yuvflrfx" path="res://assets/environment.png" id="2_oekm8"]
 [ext_resource type="PackedScene" uid="uid://c2ct3ib0mfngc" path="res://scenes/player/player.tscn" id="3_yd8kv"]
+[ext_resource type="PackedScene" uid="uid://c1pitfqy7hf6s" path="res://scenes/station/station.tscn" id="4_uaf1y"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -201,7 +202,11 @@ texture = ExtResource("2_oekm8")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 
+[node name="Station" parent="." instance=ExtResource("4_uaf1y")]
+position = Vector2(-391, -200)
+
 [node name="Player" parent="." instance=ExtResource("3_yd8kv")]
+position = Vector2(324, 484)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
