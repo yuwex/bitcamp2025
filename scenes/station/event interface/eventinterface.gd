@@ -14,19 +14,18 @@ var items: Array[Label] = []
 
 func _ready() -> void:
 	
-	assert(event, "Event must be passed")
+	## TESTING
+	EventManager.initEvents()
+	event = EventManager.allEvents[0]
+	##
 	
-	### TESTING
-	#EventManager.initEvents()
-	#event = EventManager.allEvents[0]
-	###
+	assert(event, "Event must be passed")
 	
 	items = [description]
 	var options: Array[Button] = []
 	
 	description.text = event.description
 	
-
 	desc_anim.play('appear')
 	
 	await get_tree().create_timer(1).timeout
@@ -73,7 +72,6 @@ func _process(delta: float):
 		
 
 func option_chosen(option: Event.Option):
-	print('inner')
 	
 	for button in buttons:
 		button.disabled = true
@@ -92,6 +90,3 @@ func option_chosen(option: Event.Option):
 	await get_tree().create_timer(1).timeout
 	
 	completed.emit()
-	
-	
-	
