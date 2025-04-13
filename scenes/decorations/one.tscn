@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bib3kl7rg45xs"]
+
+[ext_resource type="Texture2D" uid="uid://b2fn2hajntg3" path="res://assets/extras.png" id="1_5ao6i"]
+
+[node name="Npc" type="Node2D"]
+texture_filter = 1
+scale = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("1_5ao6i")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
