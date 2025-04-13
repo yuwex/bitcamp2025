@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var number_popup: PackedScene = load("res://scenes/statsdisplay/numberpopup.tscn")
+@onready var number_popup: PackedScene = preload("res://scenes/statsdisplay/numberpopup.tscn")
 
 @onready var energy_bar: ProgressBar = $Energy/ProgressBar
 @onready var morale_bar: ProgressBar = $Morale/ProgressBar
@@ -85,13 +85,12 @@ func _process(delta: float):
 	
 	### TESTING
 
-	#if Input.is_action_just_pressed('up'):	
-		#var effect = Event.Effect.new({'stat': Stats.StatType.keys().pick_random(), 'value': randi_range(-10, 10), 'type': 'ADDITIVE'})
-		#_on_effect(effect)
+	if Input.is_action_just_pressed('up'):	
+		var effect = Event.Effect.new({'stat': Stats.StatType.keys().pick_random(), 'value': randi_range(-10, 10), 'type': 'ADDITIVE'})
+		_on_effect(effect)
 
 func _on_effect(effect: Event.Effect):
-	# add particle fx
-	
+		
 	var positive = ((effect.type == Event.StatChangeType.MULTIPLICATIVE 
 		and effect.value >= 1) 
 		or effect.value > 0)
@@ -102,6 +101,25 @@ func _on_effect(effect: Event.Effect):
 	var color = COLOR_GOOD if positive else COLOR_BAD
 	
 	labels[effect.stat].set("theme_override_colors/font_color", color)
+	
+	var popup: NumberPopup = number_popup.instantiate()
+	popup.position = labels[effect.stat].global_position
+	popup.position.x = 200
+	popup.position.y += 30
+	popup.color = color
+	
+	if effect.type == Event.StatChangeType.MULTIPLICATIVE:
+		popup.val = '%s' % int(round((effect.value - 1) * 10))
+		if effect.value >= 1:
+			popup.val = '+' + popup.val 
+		
+		popup.val += '%'
+	else:
+		popup.val = '%s' % int(round(effect.value))
+		if effect.value >= 0:
+			popup.val = '+' + popup.val
+	
+	add_child(popup)	
 
 func int_to_letter(v: int) -> String:
 	var grades = ['F-', 'F', 'F+', 'D-', 'D', 'D+', 'C-', 'C', 'C+', 'B-', 'B', 'B+', 'A-', 'A', 'A+']
