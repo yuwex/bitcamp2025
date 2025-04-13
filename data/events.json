@@ -2616,6 +2616,233 @@
 					"effects": []
 				}
 			]
+		},
+		{
+			"id": 58,
+			"conditions": [],
+			"weight": 800,
+			"station": "HACKING",
+			"description": "Do you want to implement the Capital One Nessie API?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -20.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 59,
+			"conditions": [],
+			"weight": 1200,
+			"station": "HARDWARE",
+			"description": "You notice there is a category for the hack with the most LEDs, do you take as many as you can?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				},
+				{
+					"description": "Yes, and I'm gonna go and buy more too",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 30.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 20.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"id": 60,
+			"conditions": [],
+			"weight": 800,
+			"station": "FOOD",
+			"description": "Bytecamp staff is handing out chick-fil-a chicken sandwhiches",
+			"options": [
+				{
+					"description": "Take one",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 20.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 20.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -30.0
+						}
+					]
+				},
+				{
+					"description": "Don't take one",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				},
+				{
+					"description": "Steal a bunch",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": -30.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 30.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -100.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 50.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 61,
+			"conditions": [],
+			"weight": 700,
+			"station": "HACKING",
+			"description": "You and your team are starting to feel discouraged about your project?",
+			"options": [
+				{
+					"description": "We got this!",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 20.0
+						}
+					]
+				},
+				{
+					"description": "I can't take it anymore!",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -100.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 62,
+			"conditions": [],
+			"weight": 800,
+			"station": "HACKING",
+			"description": "You think your project may benefit a MongoDB atlas cluster. Would you like to add it?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 20.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
 		}
 	]
 }
