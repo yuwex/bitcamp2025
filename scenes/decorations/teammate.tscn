@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyalxlveilsok"]
+
+[ext_resource type="Texture2D" uid="uid://dp3143701dwot" path="res://assets/minion.png" id="1_8il8e"]
+
+[node name="Teammate" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_8il8e")

@@ -1748,7 +1748,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 5.0
+							"value": -5.0
 						}
 					]
 				}
@@ -2051,7 +2051,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 50.0
+							"value": -10.0
 						},
 						{
 							"stat": "ENERGY",
@@ -2443,7 +2443,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 80.0
+							"value": -80.0
 						},
 						{
 							"stat": "MORALE",
@@ -2459,7 +2459,7 @@
 						{
 							"stat": "HUNGER",
 							"type": "ADDITIVE",
-							"value": 30.0
+							"value": -30.0
 						}
 					]
 				}
@@ -2614,6 +2614,619 @@
 					"description": "Stay inside",
 					"trigger": -1,
 					"effects": []
+				}
+			]
+		},
+		{
+			"id": 58,
+			"conditions": [],
+			"weight": 800,
+			"station": "HACKING",
+			"description": "Do you want to implement the Capital One Nessie API?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -20.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 59,
+			"conditions": [],
+			"weight": 1200,
+			"station": "HARDWARE",
+			"description": "You notice there is a category for the hack with the most LEDs, do you take as many as you can?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				},
+				{
+					"description": "Yes, and I'm gonna go and buy more too",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 30.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 20.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"id": 60,
+			"conditions": [],
+			"weight": 800,
+			"station": "FOOD",
+			"description": "Bytecamp staff is handing out chick-fil-a chicken sandwhiches",
+			"options": [
+				{
+					"description": "Take one",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 20.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 20.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -30.0
+						}
+					]
+				},
+				{
+					"description": "Don't take one",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				},
+				{
+					"description": "Steal a bunch",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": -30.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 30.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -100.0
+						},
+						{
+							"stat": "ENERGY",
+							"type": "ADDITIVE",
+							"value": 50.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 61,
+			"conditions": [],
+			"weight": 700,
+			"station": "HACKING",
+			"description": "You and your team are starting to feel discouraged about your project?",
+			"options": [
+				{
+					"description": "We got this!",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 20.0
+						}
+					]
+				},
+				{
+					"description": "I can't take it anymore!",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -100.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 62,
+			"conditions": [],
+			"weight": 800,
+			"station": "HACKING",
+			"description": "You think your project may benefit a MongoDB atlas cluster. Would you like to add it?",
+			"options": [
+				{
+					"description": "Yes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 20.0
+						}
+					]
+				},
+				{
+					"description": "No",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 63,
+			"conditions": [],
+			"weight": 800,
+			"station": "HACKING",
+			"description": "Your teammate says his boss needs help stealing the moon.",
+			"options": [
+				{
+					"description": "Help him",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 35.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				},
+				{
+					"description": "Continue working on your project",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 64,
+			"conditions": [],
+			"weight": 700,
+			"station": "FOOD",
+			"description": "You and another hacker approach the food table at the same time. Your eyes lock. There's one chicken sandwich left.",
+			"options": [
+				{
+					"description": "Let them have it",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 15.0
+						}
+					]
+				},
+				{
+					"description": "Quickly snatch it",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -15.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 65,
+			"conditions": [],
+			"weight": 400,
+			"station": "FOOD",
+			"description": "You ask ChatGPT for help on your project.",
+			"options": [
+				{
+					"description": "Copy and paste the features without reviewing",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				},
+				{
+					"description": "Use AI responsibly",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 66,
+			"conditions": [
+				{
+					"stat": "HUNGER",
+					"max": 30,
+					"min": 0
+				}
+			],
+			"weight": 800,
+			"station": "HARDWARE",
+			"description": "You are very hungry and see a Raspberry Pi on the table.",
+			"options": [
+				{
+					"description": "Eat it",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -10.0
+						}
+					]
+				},
+				{
+					"description": "Use it for your project",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 67,
+			"conditions": [],
+			"weight": 600,
+			"station": "SPONSOR",
+			"description": "You approach the sponsor table...",
+			"options": [
+				{
+					"description": "Take the free stuff",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": -10.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Talk to them to learn more about their tools.",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "PROJ_ORIGINALITY",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 68,
+			"conditions": [],
+			"weight": 400,
+			"station": "SPONSOR",
+			"description": "Peraton tries to talk to you.",
+			"options": [
+				{
+					"description": "Ignore them",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Talk to them",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 69,
+			"conditions": [],
+			"weight": 500,
+			"station": "FOOD",
+			"description": "You are thirsty and need a drink.",
+			"options": [
+				{
+					"description": "Get a coffee",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 5.0
+						}
+					]
+				},
+				{
+					"description": "Get water",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "COMMUNICATION",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 70,
+			"conditions": [],
+			"weight": 600,
+			"station": "HARDWARE",
+			"description": "You decide to mess with some wires and shock yourself.",
+			"options": [
+				{
+					"description": "Toss the board in the trash",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
+				},
+				{
+					"description": "Continue fiddling with it",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 71,
+			"conditions": [],
+			"weight": 600,
+			"station": "HACKING",
+			"description": "You are getting extremely frustrated at these bugs...",
+			"options": [
+				{
+					"description": "Shut your laptop and walk around for a few minutes",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "MORALE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Keep going!",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_TECHNICAL",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 72,
+			"conditions": [],
+			"weight": 600,
+			"station": "HACKING",
+			"description": "You read about a new library for smoother graphics.",
+			"options": [
+				{
+					"description": "Take the time to implement it into your project",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": 10.0
+						},
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": 5.0
+						},
+						{
+							"stat": "HUNGER",
+							"type": "ADDITIVE",
+							"value": 10.0
+						}
+					]
+				},
+				{
+					"description": "Maybe next time",
+					"trigger": -1,
+					"effects": [
+						{
+							"stat": "KNOWLEDGE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}, 
+						{
+							"stat": "PROJ_USER_EXPERIENCE",
+							"type": "ADDITIVE",
+							"value": -5.0
+						}
+					]
 				}
 			]
 		}
